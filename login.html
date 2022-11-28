@@ -1,0 +1,23 @@
+<form>
+    <label for="Uname">UserName:</label><br>
+    <input type="text" id="Uname" name="Uname"><br>
+    <label for="Pasword">Pasword:</label><br>
+    <input type="text" id="Pasword" name="Pasword"><br>
+  </form>
+
+<script>
+let usercode = document.getElementById("Uname")
+let Pascode = document.getElementById("Pasword")
+function checkUsername() {
+    if (usercode.value === "Hude06" && Pascode.value === "r4e4ndk2k5") {
+        alert("Access Granted!");
+        location.replace("file:///home/chronos/u-1dca0185475dcbf649a4c35084a680178f70358c/MyFiles/Coding/Texteditor-main/Texteditor-main/index.html")
+    } else {
+        return
+    }
+
+}
+setInterval(() => {
+    checkUsername();
+},5*1000)
+</script>
