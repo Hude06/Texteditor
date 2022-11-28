@@ -1,0 +1,16 @@
+<label for="freeform">Code-Editor</label>
+<br>
+<textarea id="freeform" name="freeform" rows="10" cols="40">
+Enter text here...
+</textarea>
+<script src="index.js"></script> 
+<script>
+    function XX()
+    {
+        var first2 = document.getElementById("freeform").value;
+    } 
+</script>
+
+setInterval(function(){ 
+    //this code runs every second 
+}, 1000);

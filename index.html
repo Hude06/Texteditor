@@ -1,0 +1,29 @@
+<label for="freeform">Code-Editor</label>
+<h4 id="h4">Caracters Remaining</h4>
+<br>
+<textarea id="freeform" name="freeform" rows="10" cols="40">Start Typing Here</textarea>
+<script>
+function save() {
+  let text = document.getElementById("freeform").value
+  console.log("got the text",text)
+  localStorage.setItem("text",text)
+}
+setInterval(() => {
+  console.log("saving")
+  save()
+  CheckCaracters();
+},5*1000)
+function load() {
+ console.log("Loading");
+ let textarea = document.getElementById("freeform")
+ textarea.value = localStorage.getItem("text");
+}
+function CheckCaracters() {
+  let length = localStorage.getItem("text");
+  let Num = length.length
+  document.getElementById("h4").innerHTML = 2000 -  Num + " Character Remaining";
+  console.log(Num);
+}
+window.onload = load;
+</script>
+<script src="index.js"></script> 
